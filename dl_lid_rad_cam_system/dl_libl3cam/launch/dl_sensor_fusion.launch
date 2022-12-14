@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+   <node pkg="dl_lidarpointcloud" type="dl_lidarpointcloud" name="dl_lidarpointcloud" output="screen"/>
+   <node pkg="dl_lidarrgb" type="dl_lidarrgb" name="dl_lidarrgb" output="screen"/>
+
+
+</launch>
+
+
