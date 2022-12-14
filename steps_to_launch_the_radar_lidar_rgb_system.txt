@@ -1,0 +1,251 @@
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////--------------STEPS TO LAUNCH Radar, Lidar and RGB nodes system--------///////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+We need to launch the following:
+
+
+
+$rosrun radar_initialization radar_initialization     //Initializes the radar
+
+                         OR
+
+             sudo ip link set can0 type can bitrate 500000
+             sudo ip link set up can0
+             
+/////////////////////////////////////////////////////             
+//////---If the simulator is launched-----///////////
+/////////////////////////////////////////////////////             
+
+$roscore
+             
+cd $/catkin_ws/L3CamSimulator/build     
+
+          //This runs the simulator that sends the rgb and lidar data to be read by the lidarpointcloud and the lidarrgb packages
+
+$./l3cam_simulator
+
+$roslaunch lidar_ymdhmsz lrgb_sensors.launch
+
+         //This launch file opens the libL3cam/launch/sensor_fusion.launch which contains the LidarPointcloud and the LidarRGB packages that publish the /PC2_lidar and the /img_rgb topics respectivelly.
+  
+         //Also calls the  umrr_driver/launch/automotive_radar_visualization.launch which publish the radar  pointcloud2 topic  /radar/target_list_cartesian
+  
+         //The lidar_ymdhmsz radar_ymdhmsz image_ymdhmsz  nodes are called which publish the /lidar_stamp, /radar_stamp and /image_stamp respectivelly. 
+
+$roslaunch lidar_ymdhmsz rviz.launch
+
+         // Launch file to call the RVIZ conf to see the /lidar_stamp, /radar_stamp and /image_stamp respectivelly. 
+
+
+$ roslaunch lidar_ymdhmsz start.launch
+    
+          // The launch file launches the rosservices so the lidar and the radar pointcloud can be save in the computer as .pcd also it saves the RGD .png images.     
+          
+////////////////          
+///---END---///        
+///////////////
+
+
+////////////////////////////////////////////////////////////////             
+//////---If the lidar is connected to the laptop-----///////////
+////////////////////////////////////////////////////////////////   
+   
+$roscore 
+          
+$rosrun dl_libl3cam dl_libl3cam  
+
+
+      // This node makes the integration between the Lidar and the RGB based on the Lidar driver.  
+      
+$roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
+
+$roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
+      
+$roslaunch dl_lidar_ymdhmsz dl_start.launch       
+      
+///////////////         
+///---END---///        
+///////////////       
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////             
+//////---If the lidar is connected to the laptop to get samples for calibration-----///////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+$roscore 
+          
+$rosrun libL3cam libL3cam     
+
+$roslaunch lidar_rgb_radar_sync sync_sensors.launch  
+
+        // This launch runs sensor_fusion.launch, automotive_radar_visualization.launch  and the LidarRGB and the LidarPointcloud
+
+           
+$rosservice call action "in_: 'pause'"   ////to pause the sync node
+
+$rosservice call action "in_: 'start'"   ////to re start the sync node          
+             
+///////////////         
+///---END---///        
+///////////////             
+
+
+~/catkin_ws/L3CamSimulator/build$ ./l3cam_simulator   //This runs the simulator that sends the rgb and lidar data to be read                                                  //by the lidarpointcloud and the lidarrgb packages
+
+
+$roslaunch libL3cam sensor_fusion.launch              //this one runs the lidarpointcloud and the lidarrgb packages
+
+$roslaunch umrr_driver automotive_radar_visualization.launch  // this launches the radar package
+
+$rosrun lidar_rgb_radar_sync lidar_rgb_radar_sync     //It synchronizes lidar, radar and rgb
+
+
+
+ ______________________________________
+|______BUT NOW we just call:___________|
+       |for synchronization|
+              
+$roslaunch lidar_rgb_radar_sync sync_sensors.launch 
+
+//In another window
+
+$rosservice call action "in_: 'pause'"   ////to pause the sync node
+
+$rosservice call action "in_: 'start'"   ////to re start the sync node
+
+//////////////////
+//--END--/////////
+//////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////--------------STEPS TO LAUNCH lidar_radar_rgb_SYSTEM---------------/////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+$ roscore
+
+$rosrun libL3cam libL3cam  // This none makes the integration between the Lidar and the RGB based on the Lidar driver.
+
+$roslaunch lidar_rgb_radar_sync sync_sensors.launch  // This launch runs sensor_fusion.launch, automotive_radar_visualization.launch 
+                                                     // and the LidarRGB and the LidarPointcloud
+
+$roslaunch lidar_rgb_radar_sync sync_rviz.launch     // the lidar_rgb_radar_sync. 
+
+///To  stop the the stream and the device we call the following services:
+
+$rosservice call /l3cam "in_: 'stop_stream'"
+$rosservice call /l3cam "in_: 'stop_device'"
+
+//These services stop the streaming and the device in the node libL3cam
+
+///////////////
+///---END---///
+///////////////
+
+
+
+
+///////////////////////////////////////////////////////////
+////////---TO LAUNCH ROS BAG RECORD and PLAY---////////////
+///////////////////////////////////////////////////////////  
+
+/home/acp/catkin_ws/src/lidar_rgb_radar_sync/sync_rosbag
+
+
+$roslaunch lidar_rgb_radar_sync sync_record_rosbag.launch 
+
+$roslaunch lidar_rgb_radar_sync sync_play_rosbag.launch 
+
+/////////
+/////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////--------------STEPS TO LAUNCH mono_detector_node---------------/////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+$ roscore
+
+~/catkin_ws/L3CamSimulator/build$ ./l3cam_simulator
+
+
+$ roslaunch libL3cam sensor_fusion.launch
+
+$ rosrun mono_detector mono_detector_node
+
+/////////////
+/////////////
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////--------------STEPS TO LAUNCH radar_detector_node---------------////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+$roscore
+
+$rosrun radar_initialization radar_initialization     //Initializes the radar
+
+
+$ roslaunch umrr_driver automotive_radar_visualization.launch  // this launches the radar package
+
+$ rosrun radar_detection_msg radar_detection_msg   //this launches the radar_msgs/RadarDetectionArray Message
+
+$ rosrun radar_detector radar_detector_node
+
+//////////////
+//////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////--------------STEPS TO LAUNCH lidar_detector_node---------------////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+$ roscore
+
+~/catkin_ws/L3CamSimulator/build$ ./l3cam_simulator
+
+$ roslaunch libL3cam sensor_fusion.launch
+
+$ rosrun lidar_detector lidar_detector_node
+
+
+//////////////
+//////////////
+
+
+~/catkin_ws/src/multi_sensor_calibration/lidar_detector/example$
+
+roscore
+rosrun pcl_ros pcd_to_pointcloud table.pcd 0.1 _frame_id:=map cloud_pcd:=topic_cloud_pcd
+
+rosrun pcl_ros pcd_to_pointcloud lidar.pcd 0.1 _frame_id:=radar cloud_pcd:=/velodyne_points
+
+rosrun rviz rviz
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+
+
+
+                
+                 
+	
+                
+
+	
+
+	
+
+	
+
+                 
+
