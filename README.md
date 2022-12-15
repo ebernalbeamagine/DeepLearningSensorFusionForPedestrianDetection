@@ -1,4 +1,4 @@
-# PatrolBot Self Driving main repository.
+# Deep Learning Sensor Fusion for Pedestrian Detection
 
 This repository presents a fully convolutional neural network architecture for multimodal
 sensor fusion, such as lidar, sonar, and RGB camera. The core of the network is based on SegNet,
@@ -12,4 +12,12 @@ calibration matrix method for sensor alignment.
 
 ## Package description:
 
-* **dl_lid_rad_cam_system** This package contains three sub-folders
+* **dl_lid_rad_cam_system** This folder contains four packages:
+
+    * **dl_libl3cam** This package is a wraper for the L3CAM lidar-RGB sensor from the company Beamagine.
+    
+    * **dl_lidarpointcloud** This node receives a L3CAM socket data and publish a lidar pointcloud.
+    
+    * **dl_lidarrgb** This package receives a L3CAM socket data and publish a rgb image topic.
+    
+    * **dl_lrgb_ymdhmsz**
