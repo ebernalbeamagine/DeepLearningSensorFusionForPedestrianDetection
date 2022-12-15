@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>    
+
+   <node pkg="tf" type="static_transform_publisher" name="radar_to_lidar"  args="0.0 0.0 0.0 0.0 0.0 0.0 lidar base_link 100" />
+            
+   <!--node pkg="radar_initialization" type="radar_initialization" name="radar_initialization"/-->
+   <!--node pkg="rosbag" type="play" name="player" output="screen" args="clock /home/acp/catkin_ws/radar_bag/indoor.bag"/-->
+                            
+   <include file="$(find dl_libl3cam)/launch/dl_sensor_fusion.launch"/> 
+                  
+   <include file="$(find umrr_driver)/launch/automotive_radar_visualization.launch"/> 
+                                
+   <node pkg="dl_lidar_ymdhmsz" type="dl_lidar_ymdhmsz" name="dl_lidar_ymdhmsz"  output="screen"/>
+	
+   <node pkg="dl_radar_ymdhmsz" type="dl_radar_ymdhmsz" name="dl_radar_ymdhmsz"  output="screen"/>
+	
+   <node pkg="dl_image_ymdhmsz" type="dl_image_ymdhmsz" name="dl_image_ymdhmsz"  output="screen"/>
+                          
+</launch>
+
+
+
+
