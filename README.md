@@ -12,7 +12,7 @@ calibration matrix method for sensor alignment.
 
 ## Package description:
 
-* **dl_lid_rad_cam_system** This folder contains three packages and one folder with three packages:
+* **dl_lid_rad_cam_system** This folder contains three packages and one folder with three packages.It makes communication with the L3CAM lidar and save the data into local host:
 
     * **dl_libl3cam** This package is a ROS-wraper for the L3CAM lidar-RGB sensor from the company Beamagine.
     
@@ -20,4 +20,4 @@ calibration matrix method for sensor alignment.
     
     * **dl_lidarrgb** This package receives a L3CAM socket data and publishes a rgb image topic.
     
-    * **dl_lrgb_ymdhmsz**  This folder is composed of three packages which  save the image, lidar and radar  in  a yyMMdd-hhmmsszz format respectivelly.
+    * **dl_lrgb_ymdhmsz**  This folder is composed of three packages which  save the image, lidar and radar data in  a yyMMdd-hhmmsszz format respectivelly.
