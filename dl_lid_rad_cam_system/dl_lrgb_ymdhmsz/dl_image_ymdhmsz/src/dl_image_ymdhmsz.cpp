@@ -71,7 +71,7 @@ void  ImageCallback(const  sensor_msgs::ImageConstPtr& img_msg_){
    sprintf (ms, "%03d", msec);
     
    if(flag_rgb==true){    
-      cv:imwrite("/home/acp/catkin_ws/src/dl_pedestrian_detection/dl_lrgb_ymdhmsz/RGB/" +   std::to_string(year)+ md + "_" + hms + "_" + ms + ".png", cv_img_->image);
+      cv:imwrite("../../../dl_lrgb_ymdhmsz/RGB/" +   std::to_string(year)+ md + "_" + hms + "_" + ms + ".png", cv_img_->image);
   
    }
    
@@ -106,7 +106,7 @@ int main(int argc, char** argv){
    ros::init (argc, argv, "image_ymdhmsz");
    ros::NodeHandle nh_;
   
-   system("exec rm -r /home/acp/catkin_ws/src/dl_pedestrian_detection/dl_lrgb_ymdhmsz/RGB/*");
+   system("exec rm -r ../../../dl_lrgb_ymdhmsz/RGB/*");
    
    img_sub_ = nh_.subscribe<sensor_msgs::Image>("/img_rgb_", 10, ImageCallback);
    img_pub_ = nh_.advertise<sensor_msgs::Image>("/img_stamp", 2);
