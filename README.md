@@ -21,3 +21,5 @@ calibration matrix method for sensor alignment.
     * **dl_lidarrgb** This package receives a L3CAM socket data and publishes a rgb image topic.
     
     * **dl_lrgb_ymdhmsz**  This folder is composed of three packages which  save the image, lidar and radar data in  a yyMMdd-hhmmsszz format respectivelly.
+
+* **dl_lidar_rgb_radar_matches** This package synchronizes the radar,  lidar and rgb images.
