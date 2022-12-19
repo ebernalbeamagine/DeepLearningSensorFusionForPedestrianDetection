@@ -7,7 +7,7 @@
  *
  * This file is part of software developed by UPC-Cd6-Beamagin group.
  *
- * Author: Alfredo Cháez Plascencia  alfredo.chavez@upc.edu
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
  * Author: Pablo García Gómez        pablo.garcia@beamagine.com
  * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
  * 
@@ -66,7 +66,7 @@ void  LidarCallback(const  sensor_msgs::PointCloud2ConstPtr& lidar_msg_){
    sprintf (ms, "%03d", msec);
   
    if(flag_lidar==true){  
-      if( pcl::io::savePCDFileASCII ("../../../dl_lrgb_ymdhmsz/Lidar/"  + std::to_string(year)+ md + "_" + hms + "_" +   ms+".pcd", *temp_cloud)==-1){  
+      if( pcl::io::savePCDFileASCII ("../dl_lrgb_ymdhmsz/Lidar/"  + std::to_string(year)+ md + "_" + hms + "_" +   ms+".pcd", *temp_cloud)==-1){  
       PCL_ERROR ("Couldn't save pcd Lidar file  \n");
       return;
       }
@@ -103,7 +103,7 @@ int main(int argc, char** argv){
    ros::init (argc, argv, "dl_lidar_ymdhmsz");
    ros::NodeHandle nh_;
    
-   system("exec rm -r ../../../dl_lrgb_ymdhmsz/Lidar/*");
+   system("exec rm -r ../dl_lrgb_ymdhmsz/Lidar/*");
    lid_sub_ = nh_.subscribe<sensor_msgs::PointCloud2>("/PC2_lidar", 10, LidarCallback);
    lid_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/lidar_stamp", 2);
    

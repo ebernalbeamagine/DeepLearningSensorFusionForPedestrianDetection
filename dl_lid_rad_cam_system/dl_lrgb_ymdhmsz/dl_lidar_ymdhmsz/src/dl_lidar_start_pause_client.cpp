@@ -7,7 +7,7 @@
  *
  * This file is part of software developed by UPC-Cd6-Beamagin group.
  *
- * Author: Alfredo Cháez Plascencia  alfredo.chavez@upc.edu
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
  * Author: Pablo García Gómez        pablo.garcia@beamagine.com
  * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
  * 
