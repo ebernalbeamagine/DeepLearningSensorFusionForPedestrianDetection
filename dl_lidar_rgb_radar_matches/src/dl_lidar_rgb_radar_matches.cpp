@@ -271,7 +271,7 @@ void SaveLidarImagesRadarMatches(){
    cv::Mat image_rgb_(1080, 1920, 3);
    image_rgb_ = cv::imread(match_listi_[k], cv::IMREAD_COLOR);
    
-   cv::imwrite("./dl_lidar_rgb_radar_matches/data_syncrhonization/RGB/"  + std::to_string(cnt*0.000001).substr(8-leading) + ".png", image_rgb_);
+   cv::imwrite("./data_syncrhonization/RGB/"  + std::to_string(cnt*0.000001).substr(8-leading) + ".png", image_rgb_);
         
    ////////////////////////////////
    //------Handle the Radar------//
@@ -282,7 +282,7 @@ void SaveLidarImagesRadarMatches(){
       PCL_ERROR ("Couldn't read pcd file  \n");
    }
  
-   if( pcl::io::savePCDFileASCII ("./dl_lidar_rgb_radar_matches/data_syncrhonization/Radar/"  + std::to_string(cnt*0.000001).substr(8-leading) +".pcd", *cloud_ra)==-1){  
+   if( pcl::io::savePCDFileASCII ("./data_syncrhonization/Radar/"  + std::to_string(cnt*0.000001).substr(8-leading) +".pcd", *cloud_ra)==-1){  
       PCL_ERROR ("Couldn't save the pcd Radar file  \n");
       return;
   }
@@ -296,7 +296,7 @@ void SaveLidarImagesRadarMatches(){
       PCL_ERROR ("Couldn't read pcd file  \n");
    }
  
-   if( pcl::io::savePCDFileASCII ("./dl_lidar_rgb_radar_matches/data_syncrhonization/Lidar/"  + std::to_string(cnt*0.000001).substr(8-leading) +".pcd", *cloud_li)==-1){  
+   if( pcl::io::savePCDFileASCII ("./data_syncrhonization/Lidar/"  + std::to_string(cnt*0.000001).substr(8-leading) +".pcd", *cloud_li)==-1){  
       PCL_ERROR ("Couldn't save the pcd Lidar file  \n");
       return;
    }
@@ -311,21 +311,21 @@ int main (int argc, char** argv){
      ros::init (argc, argv, "dl_lidar_rgb_radar_matches");
      ros::NodeHandle nh_;
      
-    system("exec rm -r ./dl_lidar_rgb_radar_matches/data_syncrhonization/Lidar/*"); 
-    system("exec rm -r ./dl_lidar_rgb_radar_matches/data_syncrhonization/Radar/*");
-    system("exec rm -r ./dl_lidar_rgb_radar_matches/data_syncrhonization//RGB/*");
+    system("exec rm -r ./data_syncrhonization/Lidar/*"); 
+    system("exec rm -r ./data_syncrhonization/Radar/*");
+    system("exec rm -r ./data_syncrhonization//RGB/*");
   
     //! TODO: Specify the path for the images
-    pathi_ = "./dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/RGB/";
+    pathi_ = "../dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/RGB/";
     GetAllImagesFromFolder(pathi_);
    
     
      //! TODO: Specify the path for the lidar
-    pathl_ = "./dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/Lidar/";
+    pathl_ = "../dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/Lidar/";
     GetAllLidarFromFolder(pathl_);
     
      //! TODO: Specify the path for the radar
-    pathr_ = "./dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/Radar/";
+    pathr_ = "../dl_lid_rad_cam_system/dl_lrgb_ymdhmsz/Radar/";
     
     GetAllRadarFromFolder(pathr_);
     GetLidarImagesRadarMatches();
