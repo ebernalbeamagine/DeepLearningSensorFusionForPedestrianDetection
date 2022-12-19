@@ -7,7 +7,7 @@
  *
  * This file is part of software developed by UPC-Cd6-Beamagin group.
  *
- * Author: Alfredo Cháez Plascencia  alfredo.chavez@upc.edu
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
  * Author: Pablo García Gómez        pablo.garcia@beamagine.com
  * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
  * 
@@ -65,7 +65,7 @@ void  RadarCallback(const  sensor_msgs::PointCloud2ConstPtr& radar_msg_){
    sprintf (ms, "%03d", msec);
     
    if(flag_radar==true){    
-      if( pcl::io::savePCDFileASCII ("../../../lrgb_ymdhmsz/Radar/"  + std::to_string(year)+ md + "_" + hms + "_" + ms+".pcd", *temp_cloud)==-1){  
+      if( pcl::io::savePCDFileASCII ("../lrgb_ymdhmsz/Radar/"  + std::to_string(year)+ md + "_" + hms + "_" + ms+".pcd", *temp_cloud)==-1){  
         PCL_ERROR ("Couldn't save pcd Radar file  \n");
         return;
       }
@@ -102,7 +102,7 @@ int main(int argc, char** argv){
    ros::init (argc, argv, "radar_ymdhmsz");
    ros::NodeHandle nh_;
    
-   system("exec rm -r ../../../dl_lrgb_ymdhmsz/Radar/*");
+   system("exec rm -r ../dl_lrgb_ymdhmsz/Radar/*");
    
    rad_sub_ = nh_.subscribe<sensor_msgs::PointCloud2>("/radar/target_list_cartesian", 10, RadarCallback);
    rad_pub_      = nh_.advertise<sensor_msgs::PointCloud2>("/radar_stamp", 2);
