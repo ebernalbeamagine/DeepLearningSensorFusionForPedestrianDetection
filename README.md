@@ -23,3 +23,5 @@ calibration matrix method for sensor alignment.
     * **dl_lrgb_ymdhmsz**  This folder is composed of three packages which  save the image, lidar and radar data in  a yyMMdd-hhmmsszz format respectivelly.
 
 * **dl_lidar_rgb_radar_matches** This package synchronizes the radar,  lidar and rgb images.
+
+* **dl_sensors2_8_16_gray** This package takes the lidar and radar pointcloud and normilize them either into 8 or 16-depth bits.
