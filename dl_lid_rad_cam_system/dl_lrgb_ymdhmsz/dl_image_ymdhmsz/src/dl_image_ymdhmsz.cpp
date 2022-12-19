@@ -7,7 +7,7 @@
  *
  * This file is part of software developed by UPC-Cd6-Beamagin group.
  *
- * Author: Alfredo Cháez Plascencia  alfredo.chavez@upc.edu
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
  * Author: Pablo García Gómez        pablo.garcia@beamagine.com
  * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
  * 
@@ -71,7 +71,7 @@ void  ImageCallback(const  sensor_msgs::ImageConstPtr& img_msg_){
    sprintf (ms, "%03d", msec);
     
    if(flag_rgb==true){    
-      cv:imwrite("../../../dl_lrgb_ymdhmsz/RGB/" +   std::to_string(year)+ md + "_" + hms + "_" + ms + ".png", cv_img_->image);
+      cv:imwrite("../dl_lrgb_ymdhmsz/RGB/" +   std::to_string(year)+ md + "_" + hms + "_" + ms + ".png", cv_img_->image);
   
    }
    
@@ -106,7 +106,7 @@ int main(int argc, char** argv){
    ros::init (argc, argv, "image_ymdhmsz");
    ros::NodeHandle nh_;
   
-   system("exec rm -r ../../../dl_lrgb_ymdhmsz/RGB/*");
+   system("exec rm -r ../dl_lrgb_ymdhmsz/RGB/*");
    
    img_sub_ = nh_.subscribe<sensor_msgs::Image>("/img_rgb_", 10, ImageCallback);
    img_pub_ = nh_.advertise<sensor_msgs::Image>("/img_stamp", 2);
