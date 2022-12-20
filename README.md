@@ -33,6 +33,8 @@ calibration matrix method for sensor alignment.
 * **dl_lidar_rgb_radar_syn** This node takes samples for the calibration. 
 
 
+* **dl_err_opt_lid_rad** This node computes the lidar point coordinates x_l , y_l , z_l
+
 ## Getting Started
 
 ## Prerequisites
