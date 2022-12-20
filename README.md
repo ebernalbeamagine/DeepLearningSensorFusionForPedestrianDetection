@@ -40,6 +40,8 @@ calibration matrix method for sensor alignment.
 
 ## Prerequisites
 
+The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-96 Type 153 radar, and a GE66 Raider Intel ®Core(TM) i9-10980HK CPU with an NVIDIA GeForce RTX 3070 8Gb GPU. The Robot Operating System (ROS1) Noetic on Ubuntu 20.04.5 LTS is used to collect sensor data, compute extrinsic parameters, and align the sensors. Moreover, the CNN network is simulated in a Jupyter Notebook using Python 3 and a conda environment. More specifically, the simulations are divided into two parts: extrinsic parameters matrix and network simulations.
+
 ## Functionality
 
 
