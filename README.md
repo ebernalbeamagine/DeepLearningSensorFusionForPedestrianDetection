@@ -29,3 +29,20 @@ calibration matrix method for sensor alignment.
 * **dl_sensor_fusion_cnn** This node implements the multimodal sensor fusion architecture based on the SegNet CNN.
 
 * **dl_calibration** This node implements the calibration between radar and lidar sensors. 
+
+
+
+## Getting Started
+
+## Prerequisites
+
+## Functionality
+
+
+## Instalation instructions:
+
+## Run simulation:
+
+# Bibliogrhapy
+
+
