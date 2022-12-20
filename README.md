@@ -25,3 +25,5 @@ calibration matrix method for sensor alignment.
 * **dl_lidar_rgb_radar_matches** This package synchronizes the radar,  lidar and rgb images.
 
 * **dl_sensors2_8_16_gray** This package takes the lidar and radar pointcloud and normilize them either into 8 or 16-depth bits.
+
+* **dl_sensor_fusion_cnn** This node implements the multimodal sensor fusion architecture based on the SegNet CNN.
