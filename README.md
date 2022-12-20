@@ -43,6 +43,11 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 
 ## Instalation instructions:
 
+*  cd ~/ros/catkin_ws/src 
+*  git clone https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection.git
+*  cd ../ 
+*  catkin_make 
+
 ## Run simulation:
 
 # Bibliogrhapy
