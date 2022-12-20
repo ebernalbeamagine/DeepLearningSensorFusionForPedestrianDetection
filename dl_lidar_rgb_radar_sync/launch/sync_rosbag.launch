@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+
+<!-- Parameters to change each time-->
+    <!--arg name="depth_registration" default="true" /-->
+    <arg name="path" default="/home/acp/catkin_ws/src/lidar_rgb_radar_sync/sync_rosbag/" />
+    <!--arg name="path" default="/home/nvidia/" /-->
+
+<!--include file="$(find zed_wrapper)/launch/topics_reduced_frequency.launch"/-->
+
+
+
+ <!-- Putting the time back to real time-->
+    <!--rosparam>
+       /use_sim_time : false
+    </rosparam-->
+    
+   <!-- Record bag -->
+  <node pkg="rosbag" type="record" name="bag_record" 
+        args="record -o  $(arg path)/sync /tf /tf_static /img_sync /lidar_sync /radar_sync  "/> 
+  
+  
+  
+  
+
+
+<!--node pkg="static_transform_mux" type="static_transform_mux" name="static_transform"  output="screen"/-->
+</launch>
+
+
+
+   
+	

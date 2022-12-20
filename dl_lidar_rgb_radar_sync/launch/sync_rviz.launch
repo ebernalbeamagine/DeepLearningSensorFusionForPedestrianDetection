@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+                 <arg name="rviz_conf" default="$(find lidar_rgb_radar_sync)/rviz/sync.rviz" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_conf)" />
+</launch>
+
+
+
+
