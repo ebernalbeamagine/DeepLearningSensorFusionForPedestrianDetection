@@ -30,6 +30,7 @@ calibration matrix method for sensor alignment.
 
 * **dl_calibration** This node implements the calibration between radar and lidar sensors. 
 
+* **dl_lidar_rgb_radar_syn** This node takes samples for the calibration. 
 
 
 ## Getting Started
