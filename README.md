@@ -77,35 +77,35 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 In a terminal window we run the roscore command.
 
-$roscore 
+**$roscore** 
 
 Then, in another terminal window  we launch the radar driver with the following command.
 
 
 
-$rosrun dl_radar_initialization dl_radar_initialization    
+**$rosrun dl_radar_initialization dl_radar_initialization**    
 
                          OR
 
-             sudo ip link set can0 type can bitrate 500000
-             sudo ip link set up can0
+             **sudo ip link set can0 type can bitrate 500000**
+             **sudo ip link set up can0**
 
 
 The following command  runs the L3CAM ROS wrapper which is an integration between L3CAM and ROS.
           
-$rosrun dl_libl3cam dl_libl3cam  
+**$rosrun dl_libl3cam dl_libl3cam**  
 
 
        
       
-$roslaunch dl_lidar_ymdhmsz dl_rviz.launch 
+**$roslaunch dl_lidar_ymdhmsz dl_rviz.launch** 
 
     
 The following ROS launch command runs the dl_lidarpointcloud and dl_lidarrgb ROS nodes, which receive lidar and RGB socket data and publish a lidar pointcloud and an RGB image. It also runs the umrr ROS driver. In addition, it runs the dl_lidar_ymdhmsz, dl_radar_ymdhmsz, and dl_image_ymdhmsz nodes, which save the lidar and radar pointclouds and the RGB image in memory in the yyyy-MM-dd:hh:mm:ss:zz format, where yyyy denotes the year, MM denotes the month, dd denotes the day, hh denotes the hour, mm denotes the minute, ss denotes the second, and zz denotes the millisecond. This format was chosen because the lidar, RGB, and radar frequencies are 10 Hz, 6 Hz, and 18 Hz, respectively.
 
-$roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
+**$roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch**
       
-$roslaunch dl_lidar_ymdhmsz dl_start.launch  
+**$roslaunch dl_lidar_ymdhmsz dl_start.launch**  
 
 # Bibliogrhapy
 
