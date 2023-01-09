@@ -91,14 +91,17 @@ $rosrun dl_radar_initialization dl_radar_initialization
              sudo ip link set up can0
 
 
-The following command  runs the L3CAM ROS wrapper. 
+The following command  runs the L3CAM ROS wrapper which is an integration between L3CAM and ROS.
           
 $rosrun dl_libl3cam dl_libl3cam  
 
 
        
       
-$roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
+$roslaunch dl_lidar_ymdhmsz dl_rviz.launch 
+
+    
+The following  ROS launch command runs the dl_lidarpointcloud and dl_lidarrgb ROS nodes that receives the lidar and RGB socket data  and publish a lidar pointcloud and RGB image. 
 
 $roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
       
