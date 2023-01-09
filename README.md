@@ -53,7 +53,7 @@ This tutorial explain how to use the Deep Learning Sensor Fusion for Pedestrian 
 This repository is divided in two parts: **extrinsic parameters matrix** and **network simulation**.
 
 
-###Extrinsic parameters matrix:
+### Extrinsic parameters matrix:
 
 
 In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix
