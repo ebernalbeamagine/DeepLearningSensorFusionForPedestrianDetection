@@ -54,11 +54,14 @@ This repository is divided in two parts: **extrinsic parameters matrix** and **n
 
 
 ###Extrinsic parameters matrix:
-///////////////////////////////////////////////////////////////////////////////////////////////             
-//////---If the lidar is connected to the laptop to get samples for calibration-----///////////
-///////////////////////////////////////////////////////////////////////////////////////////////
 
-$roscore 
+
+In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix
+
+In a terminal window we run the roscore command.
+
+**$roscore** 
+
           
 $rosrun libL3cam libL3cam     
 
