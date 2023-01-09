@@ -51,6 +51,25 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 
 ## Run simulation:
 
+<p align="center">
+
+  <h3> STEPS TO LAUNCH Radar, Lidar and RGB nodes system</h3>
+
+</p>
+
+
+
+We need to launch the following:
+
+
+
+$rosrun radar_initialization radar_initialization     //Initializes the radar
+
+                         OR
+
+             sudo ip link set can0 type can bitrate 500000
+             sudo ip link set up can0
+
 # Bibliogrhapy
 
 
