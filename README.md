@@ -91,7 +91,7 @@ $rosrun dl_radar_initialization dl_radar_initialization
              sudo ip link set up can0
 
 
-The following command makes runs the L3CAM ROS warpper. 
+The following command  runs the L3CAM ROS wrapper. 
           
 $rosrun dl_libl3cam dl_libl3cam  
 
