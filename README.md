@@ -83,12 +83,12 @@ Then, in another terminal window  we launch the radar driver with the following 
 
 
 
-**$rosrun dl_radar_initialization dl_radar_initialization**    
+**$rosrun dl_radar_initialization dl_radar_initialization**
 
-                         OR
+                    OR
+**$sudo ip link set can0 type can bitrate 500000**
 
-             **sudo ip link set can0 type can bitrate 500000**
-             **sudo ip link set up can0**
+**$sudo ip link set up can0**
 
 
 The following command  runs the L3CAM ROS wrapper which is an integration between L3CAM and ROS.
@@ -96,8 +96,7 @@ The following command  runs the L3CAM ROS wrapper which is an integration betwee
 **$rosrun dl_libl3cam dl_libl3cam**  
 
 
-       
-      
+
 **$roslaunch dl_lidar_ymdhmsz dl_rviz.launch** 
 
     
