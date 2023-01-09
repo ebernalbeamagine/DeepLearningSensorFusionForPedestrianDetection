@@ -55,7 +55,7 @@ The system operates in two different modes:
 *  simulator mode
 *  lidar mode 
 
-In simulator mode we assumed the physical lidar is not connected to the laptop, therefore we launch lidar simulator which delivers a pointcloud and a RGB image.
+In simulator mode we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers a pointcloud and a RGB image.
 
 In lidar mode we assumed the physical lidar is connected to the laptop.
 
