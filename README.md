@@ -55,12 +55,12 @@ This repository is divided in two parts: **extrinsic parameters matrix** and **n
 
 The **network simulation** runs in two different modes: 
 
-*  simulator mode
-*  lidar mode 
+*  **simulator mode**
+*  **lidar mode** 
 
-In simulator mode we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers a pointcloud and a RGB image.
+In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers a pointcloud and a RGB image.
 
-In lidar mode we assumed the physical lidar is connected to the laptop.
+In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 
 .
