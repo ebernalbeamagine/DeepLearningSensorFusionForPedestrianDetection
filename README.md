@@ -101,7 +101,7 @@ $rosrun dl_libl3cam dl_libl3cam
 $roslaunch dl_lidar_ymdhmsz dl_rviz.launch 
 
     
-The following  ROS launch command runs the dl_lidarpointcloud and dl_lidarrgb ROS nodes that receives the lidar and RGB socket data  and publish a lidar pointcloud and RGB image. 
+The following ROS launch command runs the dl_lidarpointcloud and dl_lidarrgb ROS nodes, which receive lidar and RGB socket data and publish a lidar pointcloud and RGB image.  
 
 $roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
       
