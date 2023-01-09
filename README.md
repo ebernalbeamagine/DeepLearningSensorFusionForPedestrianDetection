@@ -55,7 +55,12 @@ The system operates in two different modes:
 *  simulator mode
 *  lidar mode 
 
+In simulator mode it is assumed the physical lidar does not exists and a lidar simulator is run which delivers a pointcloud and a RGB image.
 
+In lidar mode it is assumed the physical lidar is connected to the laptop.
+
+
+###simulator mode
 More specifically, the simulations are divided into two parts: extrinsic parameters matrix and network simulations.
 
 
