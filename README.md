@@ -51,11 +51,9 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 
 ## Run simulation:
 
-<p align="center">
+###STEPS TO LAUNCH Radar, Lidar and RGB nodes system</h3>
 
-  <h3> STEPS TO LAUNCH Radar, Lidar and RGB nodes system</h3>
 
-</p>
 
 
 
