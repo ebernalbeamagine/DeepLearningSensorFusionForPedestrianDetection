@@ -32,14 +32,11 @@ of sensors. Afterwards, an up-sampling network is applied to recover the fused d
 
 * **dl_lidar_centerpoint_depth** This node computes the lidar point coordinates x_l , y_l , z_l.
 
-## Getting Started
-This tutorial explain how to use how to use the Deep Learning Sensor Fusion for Pedestrian Detection ROS package. More specifically, the simulations are divided into two parts: extrinsic parameters matrix and network simulations.
 
 ## Prerequisites
 
 The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-96 Type 153 radar, and a GE66 Raider Intel ®Core(TM) i9-10980HK CPU with an NVIDIA GeForce RTX 3070 8Gb GPU. The Robot Operating System (ROS1) Noetic on Ubuntu 20.04.5 LTS is used to collect sensor data, compute extrinsic parameters, and align the sensors. Moreover, the CNN network is simulated in a Jupyter Notebook using Python 3 and a conda environment. 
 
-## Functionality
 
 
 ## Instalation instructions:
@@ -49,6 +46,16 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 *  cd ../ 
 *  catkin_make 
 
+
+## Functionality
+This tutorial explain how to use how to use the Deep Learning Sensor Fusion for Pedestrian Detection ROS package. More specifically, the simulations are divided into two parts: extrinsic parameters matrix and network simulations.
+
+
+
+
+
+
+## Getting Started
 ## Run simulation:
 
 ### Steps to launch the radar, lidar and RGB nodes system
