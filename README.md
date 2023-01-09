@@ -63,7 +63,7 @@ We need to launch the following:
 
 
 
-$rosrun radar_initialization radar_initialization     //Initializes the radar
+$rosrun dl_radar_initialization dl_radar_initialization     //Initializes the radar
 
                          OR
 
