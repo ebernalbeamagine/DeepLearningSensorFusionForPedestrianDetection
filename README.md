@@ -53,6 +53,29 @@ This tutorial explain how to use the Deep Learning Sensor Fusion for Pedestrian 
 This repository is divided in two parts: **extrinsic parameters matrix** and **network simulation**.
 
 
+
+
+
+The **network simulation** runs in two different modes: 
+
+*  **simulator mode**
+*  **lidar mode** 
+
+In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
+
+In **lidar mode** we assumed the physical lidar is connected to the laptop.
+
+
+.
+
+
+
+
+
+
+
+## Run the simulation:
+
 ### Extrinsic parameters matrix:
 
 
@@ -78,26 +101,6 @@ $rosservice call action "in_: 'start'"   ////to re start the sync node
 ///---END---///        
 /////////////// 
 
-
-The **network simulation** runs in two different modes: 
-
-*  **simulator mode**
-*  **lidar mode** 
-
-In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
-
-In **lidar mode** we assumed the physical lidar is connected to the laptop.
-
-
-.
-
-
-
-
-
-
-
-## Run the simulation:
 
 ### lidar mode:
 
