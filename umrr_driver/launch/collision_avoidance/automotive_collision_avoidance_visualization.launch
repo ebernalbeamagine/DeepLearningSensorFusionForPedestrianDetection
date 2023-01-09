@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file_umrr_occ" default="$(find umrr_driver)/cfg/collision_avoidance/umrr_driver_occ_grid_config.yaml" />
+    <arg name="config_file_umrr_radar" default="$(find umrr_driver)/cfg/umrr_driver_default_config.yaml" />
+    <arg name ="node_namespace_occ_grid" default ="occupancy_grid" />
+    <arg name ="node_namespace_radar" default ="radar" />
+    <arg name ="show_raw_targets" default ="true" />
+
+    <rosparam file="$(arg config_file_umrr_occ)" subst_value="true"/>
+    
+    <!-- Group nodes to provide convenient way of starting multiple nodes -->
+    <group ns="$(arg node_namespace_occ_grid)">
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+                <param name="frame_id" value="$(arg node_namespace_occ_grid)" />
+        </node>
+
+        <node name="occ_grid_visualizer" pkg="umrr_driver" type="occ_grid_publisher.py" output="screen" required="true">
+            <rosparam file="$(find umrr_driver)/cfg/collision_avoidance/occ_grid_visualization_config.yaml" command="load"/>
+        </node>
+    </group>
+    
+    
+    <rosparam file="$(arg config_file_umrr_radar)" subst_value="true"/>
+    <group ns="$(arg node_namespace_radar)">
+
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+            <param name="frame_id" value="$(arg node_namespace_radar)" />
+        </node>
+
+        <node name="pcl_filter" pkg="umrr_driver" type="pc2_filter.py" output="screen" >
+            <param name="input_topic" value="target_list" />
+        </node>
+
+        <node name="coord_converter" pkg="umrr_driver" type="spherical_coord_2_cartesian_coord.py" output="screen">
+            <param name="data_frame" value="radar" />
+            <param name="target_frame" value="base_link" />
+        </node>
+    </group>
+    <!-- launch visualization, too  -->    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find umrr_driver)/rviz/collision_avoidance/occ_grid_vis.rviz" />
+    <node name="base_link_2_radar" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link radar 100" />
+
+</launch>
+
+
+

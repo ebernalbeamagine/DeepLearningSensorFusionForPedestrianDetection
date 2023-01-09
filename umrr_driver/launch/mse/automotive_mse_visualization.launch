@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file_umrr_mse" default="$(find umrr_driver)/cfg/mse/umrr_driver_mse_objects_config.yaml" /> -->
+    <arg name="config_file_umrr_radar" default="$(find umrr_driver)/cfg/mse/umrr_driver_mse_targets_config.yaml" />
+    <arg name ="node_namespace_mse" default ="mse" />
+    <arg name ="node_namespace_radar" default ="radar" />
+    <arg name ="show_raw_targets" default ="true" />
+
+    <rosparam file="$(arg config_file_umrr_mse)" subst_value="true"/>
+    <!-- Group nodes to provide convenient way of starting multiple nodes -->
+    <group ns="$(arg node_namespace_mse)">
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+                <param name="frame_id" value="$(arg node_namespace_mse)" />
+        </node>
+        
+        <node name="objects_visualizer" pkg="umrr_driver" type="objects_publisher.py" output="screen" required="true" />
+
+        <node name="base_link_2_mse" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link mse 100" />
+    </group>
+    
+    
+    <rosparam file="$(arg config_file_umrr_radar)" subst_value="true"/>
+    <group ns="$(arg node_namespace_radar)">
+
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+            <param name="frame_id" value="$(arg node_namespace_radar)" />
+        </node>
+
+        <node name="pcl_filter" pkg="umrr_driver" type="pc2_filter.py" output="screen" >
+            <param name="input_topic" value="target_list" />
+        </node>
+
+        <node name="coord_converter" pkg="umrr_driver" type="spherical_coord_2_cartesian_coord.py" output="screen">
+            <param name="data_frame" value="radar" />
+            <param name="target_frame" value="base_link" />
+        </node>
+    </group>
+    <!-- launch visualization, too  -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find umrr_driver)/rviz/mse/mse_vis.rviz" />
+    <node name="base_link_2_radar" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link radar 100" />
+
+</launch>
+
+
+

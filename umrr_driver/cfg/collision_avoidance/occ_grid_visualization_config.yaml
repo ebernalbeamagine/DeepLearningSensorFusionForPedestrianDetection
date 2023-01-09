@@ -1,0 +1,11 @@
+enable_occupied_zone_visualization: true 
+enable_zone_size_visualization: false
+yellow_zone_p1_x: 3.5
+yellow_zone_p1_y: -3.25
+yellow_zone_p2_x: 0.0
+yellow_zone_p2_y: 3.25
+red_zone_p1_x: 2.0
+red_zone_p1_y: -1.75
+red_zone_p2_x: 0.0
+red_zone_p2_y: 1.75
+warning_level_theshold: 0.3

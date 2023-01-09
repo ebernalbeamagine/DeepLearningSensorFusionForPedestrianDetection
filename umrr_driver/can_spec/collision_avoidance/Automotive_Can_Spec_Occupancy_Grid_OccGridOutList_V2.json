@@ -1,0 +1,29 @@
+{
+   "header": {
+      "canId"      : 1536,
+      "modeBit"	   : null,
+      "maximum"    : 1,
+      "0"   : {
+         "Number_Of_Cells"       : {"offset" :    0,"resolution" : 1       ,  "start_byte": 5, "start_bit": 4, "end_byte": 6, "end_bit": 3 },
+         "Cycle_Duration"        : {"offset" :    0,"resolution" : 0.000064,  "start_byte": 0, "start_bit": 0, "end_byte": 1, "end_bit": 3 },
+         "Cycle_Count"           : {"offset" :    0,"resolution" : 1,         "start_byte": 1, "start_bit": 4, "end_byte": 5, "end_bit": 3 },
+         "Green_Zone_Occupied"   : {"offset" :    0,"resolution" : 1,         "start_byte": 6, "start_bit": 4, "end_byte": 6, "end_bit": 4 },
+         "Yellow_Zone_Occupied"  : {"offset" :    0,"resolution" : 1,         "start_byte": 6, "start_bit": 5, "end_byte": 6, "end_bit": 5 },
+         "Red_Zone_Occupied"     : {"offset" :    0,"resolution" : 1,         "start_byte": 6, "start_bit": 6, "end_byte": 6, "end_bit": 6 }
+      }
+   },
+   "body": {
+      "canId"     : 1537,
+      "rangeId"   : 200,
+      "modeBit"   : null,
+      "maximum"   : 0,
+      "0"         : {
+         "x"            : {"offset" : 0,     "resolution" : 0.001 , "start_byte" : 0, "start_bit" : 0, "end_byte" : 1, "end_bit" : 7},
+         "y"            : {"offset" : 32768, "resolution" : 0.001 , "start_byte" : 2, "start_bit" : 0, "end_byte" : 3, "end_bit" : 7},
+         "z"            : {"offset" : 128,   "resolution" : 0.1   , "start_byte" : 4, "start_bit" : 0, "end_byte" : 4, "end_bit" : 7},
+         "Warning_Zone" : {"offset" : 0,     "resolution" : 1.0   , "start_byte" : 5, "start_bit" : 0, "end_byte" : 5, "end_bit" : 1},
+         "Warning_Level": {"offset" : 0,     "resolution" : 1.0   , "start_byte" : 5, "start_bit" : 2, "end_byte" : 5, "end_bit" : 2}
+         }
+  		}
+}
+

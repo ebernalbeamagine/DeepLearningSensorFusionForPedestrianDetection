@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file" default="$(find umrr_driver)/cfg/umrr_driver_default_config.yaml" />
+    <arg name ="node_namespace" default ="radar" />
+
+    <rosparam file="$(arg config_file)" subst_value="True"/>
+    <!-- Group nodes to provide convenient way of starting multiple nodes -->
+    <group ns="$(arg node_namespace)">
+
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+        	<param name="frame_id" value="$(arg node_namespace)" />
+        </node>
+
+    </group>
+</launch>

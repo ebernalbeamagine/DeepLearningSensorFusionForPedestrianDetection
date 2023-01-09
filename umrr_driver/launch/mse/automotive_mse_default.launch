@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file_umrr_mse" default="$(find umrr_driver)/cfg/mse/umrr_driver_mse_objects_config.yaml" /> -->
+    <arg name="config_file_umrr_radar" default="$(find umrr_driver)/cfg/mse/umrr_driver_mse_targets_config.yaml" />
+    <arg name ="node_namespace_mse" default ="mse" />
+    <arg name ="node_namespace_radar" default ="radar" />
+    <arg name ="show_raw_targets" default ="true" />
+
+    <rosparam file="$(arg config_file_umrr_mse)" subst_value="true"/>
+    <!-- Group nodes to provide convenient way of starting multiple nodes -->
+    <group ns="$(arg node_namespace_mse)">
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+                <param name="frame_id" value="$(arg node_namespace_mse)" />
+        </node>
+    </group>
+    
+    <rosparam file="$(arg config_file_umrr_radar)" subst_value="true"/>
+    <group ns="$(arg node_namespace_radar)">
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+            <param name="frame_id" value="$(arg node_namespace_radar)" />
+        </node>
+    </group>
+
+</launch>
+
+
+

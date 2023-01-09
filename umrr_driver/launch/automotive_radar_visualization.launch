@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file" default="$(find umrr_driver)/cfg/umrr_driver_default_config.yaml" />
+    <arg name ="node_namespace" default ="radar" />
+    <arg name ="filter_settings" default="$(find umrr_driver)/cfg/pc2filter.cfg" />
+    <arg name="rviz_conf" default="$(find umrr_driver)/rviz/all_sensors.rviz" />
+    
+    
+    <!--node pkg="radar_initialization" type="radar_initialization" name="radar_initialization" output="screen"/-->
+
+    <rosparam file="$(arg config_file)" subst_value="True"/>
+    <!-- Group nodes to provide convenient way of starting multiple nodes -->
+    <group ns="$(arg node_namespace)">
+
+        <node name="umrr_can_publisher" pkg="umrr_driver" type="umrr_can_publisher.py" output="screen" required="true">
+                <param name="frame_id" value="$(arg node_namespace)" />
+         </node>
+
+    	<node name="pcl_filter" pkg="umrr_driver" type="pc2_filter.py" output="screen" >
+	    <param name="input_topic" value="target_list" />
+    	</node>
+    	
+    	<!--node name="rqt_gui_dyn_reconfig" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" args="-s reconfigure"/-->
+    	
+    	<node name="coord_converter" pkg="umrr_driver" type="spherical_coord_2_cartesian_coord.py" output="screen">
+		<param name="data_frame" value="" />
+		<param name="target_frame" value="" />
+		<!--param name="RCS" value="2" /-->
+    	</node>
+    	
+    	<!--node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_conf)" /-->
+  	<node name="base_link_2_radar" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link radar 100" />
+  	 <!--node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0.0 0.0 0.0 0.0 0.0 0.0 radar lidar" /-->    
+  	
+    </group>
+</launch>

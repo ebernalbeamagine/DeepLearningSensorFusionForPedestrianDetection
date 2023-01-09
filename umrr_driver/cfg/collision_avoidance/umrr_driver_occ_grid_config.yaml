@@ -1,0 +1,14 @@
+occupancy_grid/umrr_can_publisher:
+  # necessary parameters
+  can_spec: "$(find umrr_driver)/can_spec/collision_avoidance/Automotive_Can_Spec_Occupancy_Grid_OccGridOutList_V2.json"
+  can_socket: "can0"
+  legacy_mode: False
+  # omit empty strings to be set by node (must not be edited by user)
+  sensor_type: ""
+  software_vers: ""
+  curr_antenna: ""
+
+
+
+
+
