@@ -91,12 +91,12 @@ $rosrun dl_radar_initialization dl_radar_initialization
              sudo ip link set up can0
 
 
-
+The following command makes runs the L3CAM ROS warpper. 
           
 $rosrun dl_libl3cam dl_libl3cam  
 
 
-      // This node makes the integration between the Lidar and the RGB based on the Lidar driver.  
+       
       
 $roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
 
