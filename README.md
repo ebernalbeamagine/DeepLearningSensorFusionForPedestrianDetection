@@ -73,22 +73,30 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 ## Run the simulation:
 
-### Steps to launch the radar, lidar and RGB nodes system
+### lidar mode:
 
+We first need to launch the radar driver with the following command.
 
-
-
-
-We need to launch the following:
-
-
-
-$rosrun dl_radar_initialization dl_radar_initialization     //Initializes the radar
+$rosrun dl_radar_initialization dl_radar_initialization    
 
                          OR
 
              sudo ip link set can0 type can bitrate 500000
              sudo ip link set up can0
+
+
+$roscore 
+          
+$rosrun dl_libl3cam dl_libl3cam  
+
+
+      // This node makes the integration between the Lidar and the RGB based on the Lidar driver.  
+      
+$roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
+
+$roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
+      
+$roslaunch dl_lidar_ymdhmsz dl_start.launch  
 
 # Bibliogrhapy
 
