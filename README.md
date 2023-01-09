@@ -95,7 +95,7 @@ The following command  runs the L3CAM ROS wrapper which is an integration betwee
           
 **$rosrun dl_libl3cam dl_libl3cam**  
 
-
+To be able to see the pointclouds, the rgb image in rviz, the following command can be launched. 
 
 **$roslaunch dl_lidar_ymdhmsz dl_rviz.launch** 
 
@@ -103,6 +103,8 @@ The following command  runs the L3CAM ROS wrapper which is an integration betwee
 The following ROS launch command runs the dl_lidarpointcloud and dl_lidarrgb ROS nodes, which receive lidar and RGB socket data and publish a lidar pointcloud and an RGB image. It also runs the umrr ROS driver. In addition, it runs the dl_lidar_ymdhmsz, dl_radar_ymdhmsz, and dl_image_ymdhmsz nodes, which save the lidar and radar pointclouds and the RGB image in memory in the yyyy-MM-dd:hh:mm:ss:zz format, where yyyy denotes the year, MM denotes the month, dd denotes the day, hh denotes the hour, mm denotes the minute, ss denotes the second, and zz denotes the millisecond. This format was chosen because the lidar, RGB, and radar frequencies are 10 Hz, 6 Hz, and 18 Hz, respectively.
 
 **$roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch**
+
+The next command runs the roeservice that pauses and restart the  dl_lidar_ymdhmsz, dl_radar_ymdhmsz, and dl_image_ymdhmsz nodes. 
       
 **$roslaunch dl_lidar_ymdhmsz dl_start.launch**  
 
