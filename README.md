@@ -79,16 +79,30 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
 ### Extrinsic parameters matrix:
 
 
-In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix
+In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix.
 
 In a terminal window we run the roscore command.
 
 **$roscore** 
 
           
-$rosrun libL3cam libL3cam     
+Then, in another terminal window  we launch the radar driver with the following command.
 
-$roslaunch lidar_rgb_radar_sync sync_sensors.launch  
+
+
+**$rosrun dl_radar_initialization dl_radar_initialization**
+
+                    OR
+**$sudo ip link set can0 type can bitrate 500000**
+
+**$sudo ip link set up can0**
+
+
+The following command  runs the L3CAM ROS wrapper which is an integration between L3CAM and ROS.
+          
+**$rosrun dl_libl3cam dl_libl3cam**  
+
+$roslaunch dl_lidar_rgb_radar_sync dl_sync_sensors.launch  
 
         // This launch runs sensor_fusion.launch, automotive_radar_visualization.launch  and the LidarRGB and the LidarPointcloud
 
@@ -143,6 +157,6 @@ The next command runs the roeservice that pauses and restart the  dl_lidar_ymdhm
 
 
 
-# NOTE! //--this  repository is still under construction so many changes can happen.--//
+# NOTE! //--this  repository is still under construction--//
 
 
