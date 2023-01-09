@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+   
+  
+    <node pkg="dl_radar_initialization" type="dl_radar_initialization" name="dl_radar_initialization" output="screen"/>
+
+   
+</launch>
