@@ -75,7 +75,13 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 ### lidar mode:
 
-We first need to launch the radar driver with the following command.
+In a terminal window we run the roscore command.
+
+$roscore 
+
+Then, in another terminal window  we launch the radar driver with the following command.
+
+
 
 $rosrun dl_radar_initialization dl_radar_initialization    
 
@@ -85,7 +91,7 @@ $rosrun dl_radar_initialization dl_radar_initialization
              sudo ip link set up can0
 
 
-$roscore 
+
           
 $rosrun dl_libl3cam dl_libl3cam  
 
