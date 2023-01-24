@@ -63,7 +63,7 @@ The **network simulation** runs in two different modes:
 
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
-In a terminal window we run the roscore command.
+     In a terminal window we run the roscore command.
 
 **$roscore** 
 
