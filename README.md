@@ -109,9 +109,9 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
 
     $roscore 
           
-    $rosrun libL3cam libL3cam     
+    $rosrun dl_libl3cam dl_libl3cam     
     
-    $roslaunch lidar_rgb_radar_sync sync_sensors.launch
+    $roslaunch dl_lidar_rgb_radar_sync dl_sync_sensors.launch
 
     $rosservice call action "in_: 'pause'"
 
