@@ -137,7 +137,7 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
 The **network simulation**  is runmed  in a Jupyter-Notebook using Python 3
 and a conda environment.
 
-
+    dl_SegNet.ipynb
 
 
 ////////////////////////////////////////////
