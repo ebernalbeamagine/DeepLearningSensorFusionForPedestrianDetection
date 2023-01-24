@@ -115,18 +115,10 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
     
     $roslaunch lidar_rgb_radar_sync sync_sensors.launch  
 
-        // This launch runs sensor_fusion.launch, automotive_radar_visualization.launch  and the LidarRGB and the LidarPointcloud
+    $rosservice call action "in_: 'pause'"   ////to pause the sync node
 
-           
-$rosservice call action "in_: 'pause'"   ////to pause the sync node
-
-$rosservice call action "in_: 'start'"   ////to re start the sync node          
-             
-///////////////         
-///---END---///        
-///////////////   
-
-///////////////////////////////////////////////////////////
+    $rosservice call action "in_: 'start'"   ////to re start the sync node          
+ 
 
 
 The **network simulation** runs in two different modes: 
