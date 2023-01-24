@@ -73,9 +73,9 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
                     OR
 
-  $sudo ip link set can0 type can bitrate 500000**
+    $sudo ip link set can0 type can bitrate 500000
 
-**$sudo ip link set up can0**
+    $sudo ip link set up can0
 
 
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
