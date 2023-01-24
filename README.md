@@ -77,9 +77,9 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
     $sudo ip link set up can0
 
+    Move the L3CamSimulator to catkin_ws
 
-Move the L3CamSimulator to catkin_ws
-cd $/catkin_ws/L3CamSimulator/build
+    cd $/catkin_ws/L3CamSimulator/build
 
 
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
