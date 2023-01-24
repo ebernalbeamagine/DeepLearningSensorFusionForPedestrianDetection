@@ -64,7 +64,7 @@ The **network simulation** runs in two different modes:
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
 
-    cd 
+    cd ~/catkin_ws
 
     $roscore
 
@@ -83,6 +83,8 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
     $./l3cam_simulator
 
+    cd ~/catkin_ws
+
     roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
 
     roslaunch dl_lidar_ymdhmsz dl_rviz.launch
@@ -93,7 +95,15 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 
-.
+    $roscore 
+          
+    $rosrun dl_libl3cam dl_libl3cam  
+
+    $roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
+
+    $roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
+      
+    $roslaunch dl_lidar_ymdhmsz dl_start.launch  
 
 
 
