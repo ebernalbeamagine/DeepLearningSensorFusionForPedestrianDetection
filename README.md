@@ -64,16 +64,16 @@ The **network simulation** runs in two different modes:
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
 
-    In a terminal window we run the roscore command.
+    
 
     $roscore
-    Then, in another terminal window  we launch the radar driver 
-    with the following command.
 
-    $rosrun dl_radar_initialization dl_radar_initialization**
+
+    $rosrun dl_radar_initialization dl_radar_initialization
 
                     OR
-**$sudo ip link set can0 type can bitrate 500000**
+
+  $sudo ip link set can0 type can bitrate 500000**
 
 **$sudo ip link set up can0**
 
