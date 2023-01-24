@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>    
+                 
+   <node pkg="tf" type="static_transform_publisher" name="radar_to_lidar"  args="0.0 0.0 0.0 0.0 0.0 0.0 lidar base_link 100" />
+                 
+   <include file="$(find dl_libl3cam)/launch/dl_sensor_fusion.launch"/> 
+               
+   <include file="$(find umrr_driver)/launch/automotive_radar_visualization.launch"/> 
+                  
+   <!--Start detector for the Synchronization node -->
+   <node pkg="dl_lidar_rgb_radar_sync" type="dl_lidar_rgb_radar_sync" name="dl_lidar_rgb_radar_sync"/>
+	              
+</launch>
+
+
+
+

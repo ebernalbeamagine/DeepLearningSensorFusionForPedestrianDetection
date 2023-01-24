@@ -260,7 +260,7 @@ int main (int argc, char** argv){
    img_pub_      = nh_.advertise<sensor_msgs::Image>("/img_sync", 2);
    
    ROS_INFO("Ready to receive from client.	"); 
-   service = nh_.advertiseService("action", service_callback);
+   service = nh_.advertiseService("dlaction", service_callback);
  
    ros::Rate loop_rate(10);
    while(ros::ok()){
