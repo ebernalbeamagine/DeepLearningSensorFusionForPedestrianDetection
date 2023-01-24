@@ -50,16 +50,17 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 ## Functionality
 This tutorial explains how to use the leep learning sensor fusion for pedestrian detection ROS package. 
 
-This repository is divided in two parts: **extrinsic parameters matrix** and **network simulation**.
+This repository is divided in three parts: **data acquisition** **extrinsic parameters matrix** and **network simulation**.
 
 
 
 
 
-The **network simulation** runs in two different modes: 
+The **data acquisition** runs in three different modes: 
 
 *  **simulator mode**
 *  **lidar mode** 
+*  **sample calibration**
 
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
@@ -106,9 +107,29 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
     $roslaunch dl_lidar_ymdhmsz dl_start.launch  
 
 
+In **sample calibration** the lidar is connected to the laptop to get samples for calibration
+
+    $roscore 
+          
+    $rosrun libL3cam libL3cam     
+    
+    $roslaunch lidar_rgb_radar_sync sync_sensors.launch  
+
+        // This launch runs sensor_fusion.launch, automotive_radar_visualization.launch  and the LidarRGB and the LidarPointcloud
+
+           
+$rosservice call action "in_: 'pause'"   ////to pause the sync node
+
+$rosservice call action "in_: 'start'"   ////to re start the sync node          
+             
+///////////////         
+///---END---///        
+///////////////   
+
+///////////////////////////////////////////////////////////
 
 
-
+The **network simulation** runs in two different modes: 
 
 
 ## Run the simulation:
