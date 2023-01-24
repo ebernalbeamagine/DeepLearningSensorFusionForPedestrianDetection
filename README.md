@@ -124,7 +124,7 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
 
 
 
-**Extrinsic parameters matrix**  or **sensor calibration**  is the process of finding the extrinsic parameters between a multi-modal L3CAM lidar-RGB sensor from the company Beamagine  and the UMRR-96 Type 153 radar from the company Smartmicro. In a nutshell, is to find a matrix ****
+**Extrinsic parameters matrix**  or **sensor calibration**  is the process of finding the extrinsic parameters between a multi-modal L3CAM lidar-RGB sensor from the company Beamagine  and the UMRR-96 Type 153 radar from the company Smartmicro. In a nutshell, is to find a matrix **T** that best aligns both lidar and radar data.
 
 
 ////////////////////////////////////////////
