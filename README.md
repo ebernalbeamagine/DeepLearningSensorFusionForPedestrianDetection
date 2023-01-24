@@ -115,9 +115,9 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
     
     $roslaunch lidar_rgb_radar_sync sync_sensors.launch  
 
-    $rosservice call action "in_: 'pause'"   ////to pause the sync node
+    $rosservice call action "in_: 'pause'"  
 
-    $rosservice call action "in_: 'start'"   ////to re start the sync node          
+    $rosservice call action "in_: 'start'"             
  
 
 
