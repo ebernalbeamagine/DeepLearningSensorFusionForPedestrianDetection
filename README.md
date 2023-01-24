@@ -65,10 +65,10 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
 *       In a terminal window we run the roscore command.
 
-**$roscore** 
+*       **$roscore** 
 
           
-Then, in another terminal window  we launch the radar driver with the following command.
+*       Then, in another terminal window  we launch the radar driver with the   following command.
 
 
 
