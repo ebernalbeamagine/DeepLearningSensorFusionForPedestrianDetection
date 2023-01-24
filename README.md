@@ -124,7 +124,7 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
 
 
 
-### Extrinsic parameters matrix:
+**Extrinsic parameters matrix**  or **sensor calibration**  is the process 
 
 
 ////////////////////////////////////////////
