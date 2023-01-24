@@ -65,18 +65,7 @@ The **data acquisition** runs in three different modes:
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
 
-    cd ~/catkin_ws
-
-    $roscore
-
-
-    $rosrun dl_radar_initialization dl_radar_initialization
-
-                    OR
-
-    $sudo ip link set can0 type can bitrate 500000
-
-    $sudo ip link set up can0
+    
 
     Move the L3CamSimulator to catkin_ws
 
@@ -95,9 +84,18 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
+    cd ~/catkin_ws
 
-    $roscore 
-          
+    $roscore
+
+    $rosrun dl_radar_initialization dl_radar_initialization
+
+                    OR
+
+    $sudo ip link set can0 type can bitrate 500000
+
+    $sudo ip link set up can0
+   
     $rosrun dl_libl3cam dl_libl3cam  
 
     $roslaunch dl_lidar_ymdhmsz dl_rviz.launch     
