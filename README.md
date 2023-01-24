@@ -119,12 +119,17 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
  
 
 
-The **network simulation** runs in two different modes: 
 
 
-## Run the simulation:
+
+
 
 ### Extrinsic parameters matrix:
+
+
+////////////////////////////////////////////
+
+The **network simulation** runs in two different modes: 
 
 
 In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix.
