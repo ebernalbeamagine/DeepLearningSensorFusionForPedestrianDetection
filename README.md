@@ -131,7 +131,7 @@ In **sample calibration** the lidar is connected to the laptop to get samples fo
 
     $rosrun dl_lidar_centerpoint_depth dl_lidar_centerpoint_depth 
 
-    
+    dl_calibration.ipynb
 
 
 ////////////////////////////////////////////
