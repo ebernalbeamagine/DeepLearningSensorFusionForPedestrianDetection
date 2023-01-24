@@ -63,7 +63,21 @@ The **network simulation** runs in two different modes:
 
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
+In a terminal window we run the roscore command.
 
+**$roscore** 
+
+          
+Then, in another terminal window  we launch the radar driver with the following command.
+
+
+
+**$rosrun dl_radar_initialization dl_radar_initialization**
+
+                    OR
+**$sudo ip link set can0 type can bitrate 500000**
+
+**$sudo ip link set up can0**
 
 
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
@@ -84,21 +98,7 @@ In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 In this mode we assume the lidar is connected to the laptop to get samples for calibration matrix.
 
-In a terminal window we run the roscore command.
-
-**$roscore** 
-
-          
-Then, in another terminal window  we launch the radar driver with the following command.
-
-
-
-**$rosrun dl_radar_initialization dl_radar_initialization**
-
-                    OR
-**$sudo ip link set can0 type can bitrate 500000**
-
-**$sudo ip link set up can0**
+//////////////////////////////////////////////////
 
 
 The following command  runs the L3CAM ROS wrapper which is an integration between L3CAM and ROS.
