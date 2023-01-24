@@ -48,7 +48,7 @@ The system used to handle the simulations is composed of a L3CAM lidar, a UMRR-9
 
 
 ## Functionality
-This tutorial explain how to use the Deep Learning Sensor Fusion for Pedestrian Detection ROS package. 
+This tutorial explains how to use the leep learning sensor fusion for pedestrian detection ROS package. 
 
 This repository is divided in two parts: **extrinsic parameters matrix** and **network simulation**.
 
