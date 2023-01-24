@@ -79,7 +79,11 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
     Move the L3CamSimulator to catkin_ws
 
-    cd /catkin_ws/L3CamSimulator/build
+    cd ~/catkin_ws/L3CamSimulator/build
+
+    roslaunch dl_lidar_ymdhmsz dl_lrgb_sensors.launch
+
+    roslaunch dl_lidar_ymdhmsz dl_rviz.launch
 
 
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
