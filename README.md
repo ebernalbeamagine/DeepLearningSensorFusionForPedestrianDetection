@@ -66,11 +66,11 @@ In **simulator mode** we assumed the physical lidar is not connected to the lapt
 
     In a terminal window we run the roscore command.
 
-*   **$roscore**
-    Then, in another terminal window  we launch the radar driver with the       following command.
+    $roscore
+    Then, in another terminal window  we launch the radar driver 
+    with the following command.
 
-
-**$rosrun dl_radar_initialization dl_radar_initialization**
+    $rosrun dl_radar_initialization dl_radar_initialization**
 
                     OR
 **$sudo ip link set can0 type can bitrate 500000**
