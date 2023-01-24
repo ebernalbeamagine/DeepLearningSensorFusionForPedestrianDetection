@@ -63,6 +63,9 @@ The **network simulation** runs in two different modes:
 
 In **simulator mode** we assumed the physical lidar is not connected to the laptop, therefore we  launch a lidar simulator which delivers in an endless loop a pointcloud and a RGB image.
 
+
+
+
 In **lidar mode** we assumed the physical lidar is connected to the laptop.
 
 
