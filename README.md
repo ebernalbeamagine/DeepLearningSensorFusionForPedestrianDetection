@@ -1,6 +1,6 @@
 # Deep Learning Sensor Fusion for Pedestrian Detection
 
-This repository presents a fully convolutional neural network architecture for multimodal sensor fusion, such as lidar, sonar, and RGB camera. The core of the network is based on SegNet [[1]](#1), a pixel-wise semantic segmentation network. A single SegNet is assigned to each sensor reading, and the outputs are then applied to a fully connected neural network to fuse the three modalities of sensors. Afterwards, an up-sampling network is applied to recover the fused data.  This repository  also presents an extrinsic calibration matrix method for sensor alignment.
+This repository presents a fully convolutional neural network architecture for multimodal sensor fusion, such as lidar, sonar, and RGB camera. The core of the network is based on SegNet [[1]](1), a pixel-wise semantic segmentation network. A single SegNet is assigned to each sensor reading, and the outputs are then applied to a fully connected neural network to fuse the three modalities of sensors. Afterwards, an up-sampling network is applied to recover the fused data.  This repository  also presents an extrinsic calibration matrix method for sensor alignment.
 
 ## Package description:
 
@@ -142,7 +142,7 @@ and a conda environment.
 
 # Bibliogrhapy
 
-#1 Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. https:/doi.org/10.1109/TPAMI.2016.2644615.
+1. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. https:/doi.org/10.1109/TPAMI.2016.2644615.
 
 
 
