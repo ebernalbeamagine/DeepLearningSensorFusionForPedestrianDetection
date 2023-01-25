@@ -11,8 +11,9 @@ reflector. Moreover, a single copper-plated trihedral corner reflector was made 
 the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 
 
-<img src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" />
-
+|<img src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" />|
+||
+|Caption|
 ## Package description:
 
 * **dl_lid_rad_cam_system** This folder contains three packages and one folder with three packages. It communicates with the L3CAM lidar-sensor and save the data into a local host:
