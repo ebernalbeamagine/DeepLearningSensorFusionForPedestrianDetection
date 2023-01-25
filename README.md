@@ -1,6 +1,12 @@
 # Deep Learning Sensor Fusion for Pedestrian Detection
 
-This repository presents a fully convolutional neural network architecture for multimodal sensor fusion, such as lidar, sonar, and RGB camera. The sensor fusion methodology is based on [[1]]()The core of the network is based on SegNet [[2]](https://ieeexplore.ieee.org/document/7803544), a pixel-wise semantic segmentation network. A single SegNet is assigned to each sensor reading, and the outputs are then applied to a fully connected neural network to fuse the three modalities of sensors. Afterwards, an up-sampling network is applied to recover the fused data.  This repository  also presents an extrinsic calibration matrix method for sensor alignment.
+This repository presents a fully convolutional neural network architecture for multimodal sensor fusion, such as lidar, sonar, and RGB camera. The sensor fusion methodology is based on [[1]](https://doi.org/10.1117/12.2587993). And, The core of the network is based on SegNet [[2]](https://ieeexplore.ieee.org/document/7803544), a pixel-wise semantic segmentation network. A single SegNet is assigned to each sensor reading, and the outputs are then applied to a fully connected neural network to fuse the three modalities of sensors. Afterwards, an up-sampling network is applied to recover the fused data.  This repository  also presents an extrinsic calibration matrix method for sensor alignment based on singular value decomposition. A calibration board, proposed in [25], has been chosen. It consists of three rectangular
+styrofoam pieces laid side by side on top of each other. The middle layer contains four circles that serve as edge detectors for the lidar and camera sensors. Furthermore, a trihedral corner reflector is placed in the back of the calibration board at the intersection of the four
+circles. It is worth mentioning that the styrofoam does not affect the detection of the radarcsignal when it is reflected by the corner reflector.
+The layout of the calibration board is illustrated in Figure 3, where two pieces of styrofoam are used, the centers of the circles are used as a four point descriptors which intersection gives a point coordinate ( x, y ) of the location of the laser that matches the position of the trihedral corner reflector. The dash black line shows the place of the corner
+reflector. Moreover, a single copper-plated trihedral corner reflector was made as it is shown
+in the Figure 4. The dimensions are chosen according to [29] and are such that the single
+areas of the corner reflector are larger compared to the radar wavelength.
 
 ## Package description:
 
@@ -142,10 +148,9 @@ and a conda environment.
 
 # Bibliogrhapy
 
-1. Rawashdeh, N.; Bos, J.; Abu-Alrub, N. Drivable path detection using CNN sensor fusion for autonomous driving in the snow.
-2021, p. 5. https://doi.org/10.1117/12.2587993.
+1. Rawashdeh, N.; Bos, J.; Abu-Alrub, N. Drivable path detection using CNN sensor fusion for autonomous driving in the snow. 2021, p. 5. https://doi.org/10.1117/12.2587993.
 
-1. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. https:/doi.org/10.1109/TPAMI.2016.2644615.
+2. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. https:/doi.org/10.1109/TPAMI.2016.2644615.
 
 
 
