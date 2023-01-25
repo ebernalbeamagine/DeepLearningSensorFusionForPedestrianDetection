@@ -14,7 +14,7 @@ the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 <img src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" />
 
 <p align="center">
-  <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" width="300">
+  <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" width="400">
   <br>
     <em>caption</em>
 </p>
