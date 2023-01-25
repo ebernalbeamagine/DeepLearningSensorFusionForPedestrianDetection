@@ -142,7 +142,7 @@ and a conda environment.
 
 # Bibliogrhapy
 
-1. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. https:/doi.org/10.1109/TPAMI.2016.2644615.
+1. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495. [https:/doi.org/10.1109/TPAMI.2016.2644615](https:/doi.org/10.1109/TPAMI.2016.2644615).
 
 
 
