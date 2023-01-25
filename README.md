@@ -10,6 +10,10 @@ reflector. Moreover, a single copper-plated trihedral corner reflector was made 
 ç of the three isosceles triangles (a) is chosen to be 14 cm and
 the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 
+
+<a href="https://www.youtube.com/watch?v=HpYqldQJJ2Q&feature=youtu.be" target="_blank"><img src="http://i3.ytimg.com/vi/HpYqldQJJ2Q/hqdefault.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
+
 ## Package description:
 
 * **dl_lid_rad_cam_system** This folder contains three packages and one folder with three packages. It communicates with the L3CAM lidar-sensor and save the data into a local host:
