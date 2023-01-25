@@ -11,8 +11,8 @@ reflector. Moreover, a single copper-plated trihedral corner reflector was made 
 the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 
 
-<a href="https://www.youtube.com/watch?v=HpYqldQJJ2Q&feature=youtu.be" target="_blank"><img src="http://i3.ytimg.com/vi/HpYqldQJJ2Q/hqdefault.jpg" 
-alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
+<img src="http://i3.ytimg.com/vi/HpYqldQJJ2Q/hqdefault.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" />
 
 ## Package description:
 
