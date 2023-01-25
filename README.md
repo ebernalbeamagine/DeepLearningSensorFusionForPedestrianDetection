@@ -11,12 +11,12 @@ reflector. Moreover, a single copper-plated trihedral corner reflector was made 
 the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 
 
-<img src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" />
+
 
 <p align="center">
-  <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" width="400">
+  <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" width="480" height="360" border="10">
   <br>
-    <em>caption</em>
+    <em>The styrofoam calibration board has black dash lines that indicate the location of the corner reflector, which is placed in the center of the back of the board.</em>
 </p>
 
 
