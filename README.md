@@ -16,7 +16,7 @@ the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 <p align="center">
   <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/cb22.jpeg" width="480" height="360" border="10">
   <br>
-    <em> Figure 1.** The styrofoam calibration board has black dash lines that indicate the location of the corner reflector, which is placed in the center of the back of the board.</em>
+    <em> <b>Figure 1.</b> The styrofoam calibration board has black dash lines that indicate the location of the corner reflector, which is placed in the center of the back of the board.</em>
 </p>
 
 
