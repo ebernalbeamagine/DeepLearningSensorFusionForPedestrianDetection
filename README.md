@@ -6,7 +6,7 @@ This repository presents a fully convolutional neural network architecture for m
 This repository  also presents an extrinsic calibration matrix method for sensor alignment based on singular value decomposition. A calibration board, proposed in [25], has been chosen as inspiration. It consists of three rectangular styrofoam pieces laid side by side on top of each other. The middle layer contains four circles that serve as edge detectors for the lidar and camera sensors. Furthermore, a trihedral corner reflector is placed in the back of the calibration board at the intersection of the four circles. It is worth mentioning that the styrofoam does not affect the detection of the radarcsignal when it is reflected by the corner reflector.
 
 The layout of our  calibration board is illustrated in Figure 1, where two pieces of styrofoam are used, the centers of the circles are used as a four point descriptors which intersection gives a point coordinate (x,y) of the location of the laser that matches the position of the trihedral corner reflector. The dash black line shows the place of the corner
-reflector. Moreover, a single copper-plated trihedral corner reflector was made as it is shown in the Figure 4. The dimensions are chosen according to [29] and are such that the single areas of the corner reflector are larger compared to the radar wavelength. Thus, the side length edge √
+reflector. Moreover, a single copper-plated trihedral corner reflector was made as it is shown in the Figure 1. The dimensions are  such that the single areas of the corner reflector are larger compared to the radar wavelength. Thus, the side length edge √
 ç of the three isosceles triangles (a) is chosen to be 14 cm and
 the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 
@@ -21,7 +21,7 @@ the base of the triangles L = a*sqrt(2) gives 19.7 cm.
 <img alt="img-name" src="https://github.com/ebernalbeamagine/DeepLearningSensorFusionForPedestrianDetection/blob/master/documents/th6.jpeg" width="380" height="260" border="10">
  <br>
 </div>
- <em> <b>Figure 1.</b> The styrofoam calibration board has black dash lines that indicate the location of the corner reflector, which is placed in the center of the back of the board.  A custom trihedral corner reflector made of copper plates showing the side length edge of the three isosceles triangle (a) , and the base of the triangles (L) .</em>
+ <em> <b>Figure 1.</b> The styrofoam calibration board has black dash lines that indicate the location of the corner reflector, which is placed in the center of the back of the board.  A custom trihedral corner reflector made of copper plates showing the side length edge of the three isosceles triangle (a) , and the base of the triangles (L). </em>
 </p>
 
 
