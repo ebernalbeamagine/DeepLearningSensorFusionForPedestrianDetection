@@ -9,7 +9,8 @@ The layout of our  calibration board is illustrated in Figure 1, where two piece
 reflector. Moreover, a single copper-plated trihedral corner reflector was made as it is shown in the Figure 1. The dimensions are  such that the single areas of the corner reflector are larger compared to the radar wavelength. Thus, the side length edge of the three isosceles triangles (a) is chosen to be 14 cm and the base of the triangles L = a*$$\sqrt{2}$$ gives 19.7 cm.
 
 
-
+$&
+ 
 
 
 
