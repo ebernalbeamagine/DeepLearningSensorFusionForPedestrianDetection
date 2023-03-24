@@ -158,7 +158,7 @@ and a conda environment.
 
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=y8OI2HpYXLQ&feature=youtu.be" target="_blank"><img src="http://i3.ytimg.com/vi/y8OI2HpYXLQ/hqdefault.jpg" 
+<a href="https://youtu.be/b87Dop-zJpk" target="_blank"><img src="http://i3.ytimg.com/vi/y8OI2HpYXLQ/hqdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
 
 
