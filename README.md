@@ -158,7 +158,8 @@ and a conda environment.
 
 
 
-
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=y8OI2HpYXLQ&feature=youtu.be" target="_blank"><img src="http://i3.ytimg.com/vi/y8OI2HpYXLQ/hqdefault.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
 
 
 # Bibliogrhapy
@@ -167,8 +168,7 @@ and a conda environment.
 
 2. Badrinarayanan, V.; Kendall, A.; Cipolla, R. SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. IEEE Transactions on Pattern Analysis and Machine Intelligence 2017, 39, 2481–2495.  https:/doi.org/10.110
 
-3. Domhof, J.; Kooij, J.F.; Gavrila, D.M. An Extrinsic Calibration Tool for Radar, Camera and Lidar. In Proceedings of the 2019 International Conference on Robotics and Automation (ICRA), 2019, pp. 8107–8113.  https://doi.org/10.1109/ICRA.20
-19.8794186.
+3. Domhof, J.; Kooij, J.F.; Gavrila, D.M. An Extrinsic Calibration Tool for Radar, Camera and Lidar. In Proceedings of the 2019 International Conference on Robotics and Automation (ICRA), 2019, pp. 8107–8113.  https://doi.org/10.1109/ICRA.2019.8794186.
 
 # NOTE! //--this  repository is still under construction--//
 
