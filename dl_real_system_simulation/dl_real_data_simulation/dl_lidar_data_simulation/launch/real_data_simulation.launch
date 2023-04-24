@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<launch>    
+
+             
+                 
+                 <!--Start detector for the Synchronization node -->
+	<!--node pkg="lidar_rgb_radar_sync" type="lidar_rgb_radar_sync" name="lidar_rgb_radar_sync"/-->
+	<node pkg="image_data_simulation" type="image_data_simulation" name="image_data_simulation"  output="screen"/>
+	
+	<node pkg="radar_data_simulation" type="radar_data_simulation" name="radar_data_simulation"  output="screen"/>
+
+	<node pkg="lidar_data_simulation" type="lidar_data_simulation" name="lidar_data_simulation"  output="screen"/>
+	
+	<node pkg="label_data_simulation" type="label_data_simulation" name="label_data_simulation"  output="screen"/>
+	
+	
+	
+	
+	
+	<!--Start detector for the Synchronization node -->
+	<!--node pkg="real_data_sync" type="real_data_sync" name="real_data_sync" output="screen"/-->
+	<!--node pkg="pclidartogray" type="pclidartogray" name="pclidartogray" output="screen"/-->
+		    
+                 <node pkg="pclidar2gray" type="pclidar2gray" name="pclidar2gray" output="screen"/>
+                   
+                   
+                 <node pkg="pcradar2gray" type="pcradar2gray" name="pcradar2gray" output="screen"/>
+                 
+                 
+
+                 <!--node pkg="ros_segnetpy" name="ros_segnet" type="ros_segnet.py" output="screen"/-->
+                 <node pkg="ros_segnetpy" name="segnet" type="segnet.py" output="screen"/>
+                 <!--node pkg="ros_segnetpy" name="segnet_class" type="segnet_class.py" output="screen"/-->
+
+                 
+                 
+                  <!--node pkg="ros_segnetpy" name="talker" type="talker.py" output="screen"/-->
+                  
+                 
+                 
+                 
+                 
+</launch>
+
+
+
+
