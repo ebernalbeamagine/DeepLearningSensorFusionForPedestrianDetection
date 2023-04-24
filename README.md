@@ -191,7 +191,8 @@ alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
 
 3. Domhof, J.; Kooij, J.F.; Gavrila, D.M. An Extrinsic Calibration Tool for Radar, Camera and Lidar. In Proceedings of the 2019 International Conference on Robotics and Automation (ICRA), 2019, pp. 8107–8113.  https://doi.org/10.1109/ICRA.2019.8794186.
 
-4. Plascencia, A.C.; García-Gómez, P.; Perez, E.B.; DeMas-Giménez, G.; Casas, J.R.; Royo, S. A Preliminary Study of Deep Learning Sensor Fusion for Pedestrian Detection. Sensors 2023, 23, 4167. https://doi.org/10.3390 s23084167 
+
+4. Plascencia, A.C.; García-Gómez, P.; Perez, E.B.; DeMas-Giménez, G.; Casas, J.R.; Royo, S. A Preliminary Study of Deep Learning Sensor Fusion for Pedestrian Detection. Sensors 2023, 23, 4167. https://doi.org/10.3390s23084167 
 
 
 # NOTE! //--this  repository is still under construction--//
