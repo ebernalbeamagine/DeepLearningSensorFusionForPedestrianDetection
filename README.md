@@ -179,7 +179,7 @@ To run the application, the follwoing command must be launched:
 
 The following video is a demo that shows the results of the real time pedestrian detection, where the top left depicts the lidar pointcloud and the radar as white spheres. The bottom left shows the 2D grey 16-bit lidar image. The middle bottom presents the vertical 2D grey 16-bit radar image. The top right shows the RGB image. Finally, the bottom left shows the fusion result where the red are the detected pedestrians.
 
-<a href="https://youtu.be/b87Dop-zJpk" target="_blank"><img src="http://i3.ytimg.com/vi/y8OI2HpYXLQ/hqdefault.jpg" 
+<a href="https://youtu.be/b87Dop-zJpk" target="_blank"><img src="http://i3.ytimg.com/vi/b87Dop-zJpk/hqdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
 
 
