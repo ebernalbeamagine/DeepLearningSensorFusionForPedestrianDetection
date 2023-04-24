@@ -1,3 +1,36 @@
+
+/******************************************************************************
+ * \file
+ *
+ * $Id:$
+ *
+ * Copyright (C)  
+ *
+ * This file is part of software developed by UPC-Cd6-Beamagin group.
+ *
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
+ * Author: Pablo García Gómez        pablo.garcia@beamagine.com
+ * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
+ * 
+ * This file is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This file is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this file.  If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+////////////////////////////////////////////////////////// 
+//---This node synchronizes the Lidar, Radar and RGB.---//
+//////////////////////////////////////////////////////////
+
+
 #include <dl_pclidar2gray.h>
 
 
