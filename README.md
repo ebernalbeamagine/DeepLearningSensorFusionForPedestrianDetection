@@ -174,7 +174,7 @@ Figure 2 depicts the schematic diagram of the nodes and topics of the real time 
 
 To run the application, the follwoing command must be launched:
 
-**$roslaunch dl_lidar_data_simulation dl_real_data_simulation_nlabel.launch**   
+###$roslaunch dl_lidar_data_simulation dl_real_data_simulation_nlabel.launch   
 
 
 The following video is a demo that shows the results of the real time pedestrian detection, where the top left depicts the lidar pointcloud and the radar as white spheres. The bottom left shows the 2D grey 16-bit lidar image. The middle bottom presents the vertical 2D grey 16-bit radar image. The top right shows the RGB image. Finally, the bottom left shows the fusion result where the red are the detected pedestrians.
