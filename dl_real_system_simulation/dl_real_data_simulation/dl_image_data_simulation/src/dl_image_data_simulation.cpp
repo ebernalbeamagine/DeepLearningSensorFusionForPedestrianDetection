@@ -1,3 +1,36 @@
+/******************************************************************************
+ * \file
+ *
+ * $Id:$
+ *
+ * Copyright (C)  
+ *
+ * This file is part of software developed by UPC-Cd6-Beamagin group.
+ *
+ * Author: Alfredo Chávez Plascencia  alfredo.chavez@upc.edu
+ * Author: Pablo García Gómez        pablo.garcia@beamagine.com
+ * Author: Eduardo Bernal Perez      eduardo.bernal@upc.edu
+ * 
+ * This file is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This file is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this file.  If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+/////////////////////////////////////////////// 
+//---This node publishes the RGB images  .---//
+///////////////////////////////////////////////
+
+
+
 #include <dl_image_data_simulation.h>
 
 //Get the path of all lidar images and cut off the extention  
@@ -70,7 +103,7 @@ int main(int argc, char **argv){
    camera_matrix_.row(2).col(2) = 1.000000;//1.000000;//m_rgb_camera_intrinsic_matrix(2,2);  
  
   //! TODO: Specify the path for the images
-    std::string pathi_ = "./data1/RGB/";
+    std::string pathi_ = "path_to_/data1/RGB/";
    
    
     GetAllImagesFromFolder(pathi_);
@@ -90,7 +123,7 @@ int main(int argc, char **argv){
   int count = 0;
   while (ros::ok()){ 
    //////////////////////////////
-   ////Handle rgb rect images////
+   ////Handle RGB rect images////
    //////////////////////////////
    
        image = cv::imread(file_name_listi_[count]);
@@ -115,10 +148,7 @@ int main(int argc, char **argv){
             ros::shutdown();
        }
 
-       
-      /////////////////////////////////////////////////////
-      ///---draw all points from radar in the image---/////
-      /////////////////////////////////////////////////////
+     
 
   
     ros::spinOnce();
