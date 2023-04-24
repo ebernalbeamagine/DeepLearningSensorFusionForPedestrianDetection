@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>    
+	
+	<node pkg="dl_image_data_simulation" type="dl_image_data_simulation" name="dl_image_data_simulation"  output="screen"/>
+	
+	<node pkg="dl_radar_data_simulation" type="dl_radar_data_simulation" name="dl_radar_data_simulation"  output="screen"/>
+
+	<node pkg="dl_lidar_data_simulation" type="dl_lidar_data_simulation" name="dl_lidar_data_simulation"  output="screen"/>
+	    
+                 <node pkg="dl_pclidar2gray" type="dl_pclidar2gray" name="dl_pclidar2gray" output="screen"/>
+  
+                 <node pkg="dl_pcradar2gray" type="dl_pcradar2gray" name="dl_pcradar2gray" output="screen"/>
+  
+                 <node pkg="ros_segnetpy" name="segnet_nlab" type="segnet_nlab.py" output="screen"/>
+ 
+                 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dl_lidar_data_simulation)/RVIZ/real_time.rviz" />
+           
+                 
+</launch>
+
+
+
+
